@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>  
+
+    <!-- Form View -->
+    <record id="inmobiliaria_persona_form" model="ir.ui.view">
+        <field name="name">Form persona</field>
+        <field name="model">inmobiliaria.persona</field>
+        <field name="arch" type="xml">
+            <form>                
+                <group>
+                    <group>
+                        <field name="partner_id"/>
+                    </group>
+                    <group>        
+                        <field name="member_number"/>               
+                        <field name="tipo_persona"/>
+                        <field name="date_of_birth"/>                        
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree(list) View -->
+    <record id="inmobiliaria_persona_view_tree" model="ir.ui.view">
+        <field name="name">Lista Personas</field>
+        <field name="model">inmobiliaria.persona</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="partner_id"/>
+                <field name="member_number"/>
+                <field name="tipo_persona"/>
+                <field name="date_of_birth"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

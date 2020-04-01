@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id='inmobiliaria_contrato_action' model='ir.actions.act_window'>
+        <field name="name">Contratos</field>
+        <field name="res_model">inmobiliaria.contrato</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Contratos" id="inmobiliaria_contrato_menu" parent="base_menu" action="inmobiliaria_contrato_action"/>
+
+    <!-- Form View -->
+    <record id="inmobiliaria_contrato_view_form" model="ir.ui.view">
+        <field name="name">Formulario Contrato</field>
+        <field name="model">inmobiliaria.contrato</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>                    
+                    <button name="find_contrato" string="Buscar Contrato" type="object"/>                    
+                </header>
+                <group>
+                    <group>
+                        <field name="cliente"/>
+                        <field name="casa_id"/>                              
+                    </group>
+                    <group>
+                        <field name="date_start"/>
+                        <field name="meses_pago"/>
+                    </group>
+                    
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree(list) View -->
+    <record id="inmobiliaria_contrato_view_tree" model="ir.ui.view">
+        <field name="name">Lista Contratos</field>
+        <field name="model">inmobiliaria.contrato</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="cliente"/>
+                <field name="casa_id"/>
+                <field name="pago_mensual"/>
+            </tree>
+        </field>
+    </record>
+
+
+</odoo>

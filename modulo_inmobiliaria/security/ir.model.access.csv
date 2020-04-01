@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+acl_casa,inmobiliaria.casa,model_inmobiliaria_casa,,1,1,1,1
+acl_contrato,inmobiliaria.contrato,model_inmobiliaria_contrato,,1,1,1,1
+acl_persona,inmobiliaria.persona,model_inmobiliaria_persona,,1,1,1,1
